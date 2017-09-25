@@ -1,7 +1,7 @@
 
-B3-Coin development tree
+STAYCOIN development tree
 
-B3-Coin is a PoS-based cryptocurrency.
+STAYCOIN is a PoS-based cryptocurrency.
 
 Development process
 ===========================
