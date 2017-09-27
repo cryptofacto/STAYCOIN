@@ -128,10 +128,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start B3-Coin after logging in to the system.</string>
+          <string>Automatically start Staycoin after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start B3-Coin on system login</string>
+          <string>&amp;Start Staycoin on system login</string>
          </property>
         </widget>
        </item>
@@ -158,7 +158,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the B3-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Staycoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -168,7 +168,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the B3-Coin network through a SOCKS5 proxy (e.g. when connecting through Tor).</string>
+          <string>Connect to the Staycoin network through a SOCKS5 proxy (e.g. when connecting through Tor).</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy:</string>
@@ -322,7 +322,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting B3-Coin.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Staycoin.</string>
            </property>
           </widget>
          </item>

@@ -1,4 +1,4 @@
-B3-Coin-qt: Qt5 GUI for B3-Coin
+Staycoin-qt: Qt5 GUI for Staycoin
 ===============================
 
 Build instructions
@@ -24,9 +24,9 @@ then execute the following:
     qmake
     make
 
-Alternatively, install Qt Creator and open the `b3coin-qt.pro` file.
+Alternatively, install Qt Creator and open the `staycoin-qt.pro` file.
 
-An executable named `b3coin-qt` will be built.
+An executable named `staycoin-qt` will be built.
 
 
 Windows
@@ -69,7 +69,7 @@ Build configuration options
 UPNnP port forwarding
 ---------------------
 
-To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable b3coin experience), pass the following argument to qmake:
+To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable staycoin experience), pass the following argument to qmake:
 
 ::
 
@@ -117,9 +117,9 @@ flag to qmake to control this:
 Berkely DB version warning
 ==========================
 
-A warning for people using the *static binary* version of B3-Coin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
+A warning for people using the *static binary* version of Staycoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
-The static binary version of B3-Coin is linked against libdb 5.0 (see also `this Debian issue`_).
+The static binary version of Staycoin is linked against libdb 5.0 (see also `this Debian issue`_).
 
 Now the nasty thing is that databases from 5.X are not compatible with 4.X.
 
@@ -134,7 +134,7 @@ Ubuntu 11.10 warning
 ====================
 
 Ubuntu 11.10 has a package called 'qt-at-spi' installed by default.  At the time of writing, having that package
-installed causes b3coin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
+installed causes staycoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
 isn't yet fixed.
 
 Until the bug is fixed, you can remove the qt-at-spi package to work around the problem, though this will presumably

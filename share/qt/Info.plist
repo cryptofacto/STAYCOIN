@@ -7,23 +7,23 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>B3-Coin-Qt</string>
+	<string>Staycoin-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>B3-Coin-Qt</string>
+	<string>Staycoin-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.b3coin.B3-Coin-Qt</string>
+	<string>co.staycoin.Staycoin-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.b3coin.B3-CoinPayment</string>
+            <string>co.staycoin.StaycoinPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>b3coin</string>
+              <string>staycoin</string>
             </array>
           </dict>
         </array>

@@ -80,7 +80,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     nWeight(0)
 {
     setFixedSize(1160, 581);
-    setWindowTitle(tr("B3-Coin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Staycoin") + " - " + tr("Wallet"));
 	qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg);border:none;font-family:'Open Sans,sans-serif'; }");
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
@@ -189,7 +189,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
-    statusBar()->setObjectName("b3coinstatusbar");
+    statusBar()->setObjectName("staycoinstatusbar");
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
@@ -239,7 +239,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a B3-Coin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a Staycoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(sendCoinsAction);
@@ -271,8 +271,8 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About B3-Coin"), this);
-    aboutAction->setToolTip(tr("Show information about B3-Coin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Staycoin"), this);
+    aboutAction->setToolTip(tr("Show information about Staycoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -282,7 +282,7 @@ void BitcoinGUI::createActions()
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for B3-Coin"));
+    optionsAction->setToolTip(tr("Modify configuration options for Staycoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -404,7 +404,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("B3-Coin client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("Staycoin client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -462,7 +462,7 @@ void BitcoinGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("B3-Coin client"));
+    trayIcon->setToolTip(tr("Staycoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -532,7 +532,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to B3-Coin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Staycoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -625,7 +625,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
 {
-    QString strTitle = tr("B3-Coin") + " - ";
+    QString strTitle = tr("Staycoin") + " - ";
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -841,7 +841,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid B3-Coin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Staycoin address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -856,7 +856,7 @@ void BitcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid B3-Coin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Staycoin address or malformed URI parameters."));
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)

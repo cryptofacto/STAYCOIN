@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "B3-Coin cannot be compiled without assertions."
+# error "Staycoin cannot be compiled without assertions."
 #endif
 
 //
@@ -76,7 +76,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "B3-Coin Signed Message:\n";
+const string strMessageMagic = "Staycoin Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -2661,7 +2661,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("b3coin-loadblk");
+    RenameThread("staycoin-loadblk");
 
     CImportingNow imp;
 

@@ -1,4 +1,4 @@
-Source: b3coin
+Source: staycoin
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -19,11 +19,11 @@ Build-Depends: debhelper,
  libqt4-dev,
  libqrencode-dev
 Standards-Version: 3.9.2
-Homepage: http://www.b3coin.co/
-Vcs-Git: git://github.com/rat4/b3coin.git
-Vcs-Browser: http://github.com/rat4/b3coin
+Homepage: http://www.staycoin.com/
+Vcs-Git: git://github.com/cryptofacto/staycoin.git
+Vcs-Browser: http://github.com/cryptofacto/staycoin
 
-Package: b3coind
+Package: staycoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -38,10 +38,10 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides b3coind, a combined daemon and CLI tool to
+ This package provides staycoind, a combined daemon and CLI tool to
  interact with the daemon.
 
-Package: b3coin-qt
+Package: staycoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI

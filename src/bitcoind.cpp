@@ -50,12 +50,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("B3-Coin version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Staycoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  b3coind [options]                     " + "\n" +
-                  "  b3coind [options] <command> [params]  " + _("Send command to -server or b3coind") + "\n" +
-                  "  b3coind [options] help                " + _("List commands") + "\n" +
-                  "  b3coind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  staycoind [options]                     " + "\n" +
+                  "  staycoind [options] <command> [params]  " + _("Send command to -server or staycoind") + "\n" +
+                  "  staycoind [options] help                " + _("List commands") + "\n" +
+                  "  staycoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "b3coin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "staycoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)

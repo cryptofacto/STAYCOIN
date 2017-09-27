@@ -1,6 +1,6 @@
 [Protocol]
-exec=b3coin-qt '%u'
-protocol=b3coin
+exec=staycoin-qt '%u'
+protocol=staycoin
 input=none
 output=none
 helper=true

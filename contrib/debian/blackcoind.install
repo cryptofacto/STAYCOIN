@@ -1,2 +1,2 @@
-debian/bin/b3coind usr/bin
-src/b3coind usr/lib/b3coin
+debian/bin/staycoind usr/bin
+src/staycoind usr/lib/staycoin

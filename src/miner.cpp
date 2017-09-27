@@ -519,7 +519,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("b3coin-miner");
+    RenameThread("staycoin-miner");
 
     CReserveKey reservekey(pwallet);
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>B3-Coin - Debug window</string>
+   <string>Staycoin - Debug window</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/images/bkg2);</string>
@@ -39,7 +39,7 @@
           </font>
          </property>
          <property name="text">
-          <string>B3-Coin Core</string>
+          <string>Staycoin Core</string>
          </property>
         </widget>
        </item>
@@ -302,7 +302,7 @@
        <item row="14" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the B3-Coin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the Staycoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -328,7 +328,7 @@
        <item row="16" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the B3-Coin-Qt help message to get a list with possible B3-Coin command-line options.</string>
+          <string>Show the Staycoin-Qt help message to get a list with possible Staycoin command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>

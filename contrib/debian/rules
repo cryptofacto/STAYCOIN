@@ -5,29 +5,29 @@
 #build/bitcoind::
 #	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_bitcoin)
 
-DEB_INSTALL_EXAMPLES_b3coind += debian/examples/*
-DEB_INSTALL_MANPAGES_b3coind += debian/manpages/*
+DEB_INSTALL_EXAMPLES_staycoind += debian/examples/*
+DEB_INSTALL_MANPAGES_staycoind += debian/manpages/*
 
 %:
 	dh --with bash-completion $@
 
 override_dh_auto_build:
-	cd src; $(MAKE) -f makefile.unix b3coind
+	cd src; $(MAKE) -f makefile.unix staycoind
 	$(MAKE)
 
 override_dh_auto_clean:
-	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f b3coin-qt; fi
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f staycoin-qt; fi
 	cd src; $(MAKE) -f makefile.unix clean
 
 override_dh_auto_configure:
-	qmake b3coin-qt.pro USE_QRCODE=1
+	qmake staycoin-qt.pro USE_QRCODE=1
 
 override_dh_auto_test:
-	cd src; $(MAKE) -f makefile.unix test_b3coin
-	src/test_b3coin
+	cd src; $(MAKE) -f makefile.unix test_staycoin
+	src/test_staycoin
 
 # Ensure wrapper is set executable
-binary-post-install/b3coind:
-	chmod +x $(cdbs_curdestdir)usr/bin/b3coind
-binary-post-install/b3coin-qt:
-	chmod +x $(cdbs_curdestdir)usr/bin/b3coin-qt
+binary-post-install/staycoind:
+	chmod +x $(cdbs_curdestdir)usr/bin/staycoind
+binary-post-install/staycoin-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/staycoin-qt

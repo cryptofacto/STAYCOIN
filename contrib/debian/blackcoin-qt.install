@@ -1,5 +1,5 @@
-b3coin-qt usr/bin
+staycoin-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin80.xpm usr/share/pixmaps
-debian/b3coin-qt.desktop usr/share/applications
-debian/b3coin-qt.protocol usr/share/kde4/services/
+debian/staycoin-qt.desktop usr/share/applications
+debian/staycoin-qt.protocol usr/share/kde4/services/

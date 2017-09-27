@@ -1,5 +1,5 @@
 #TEMPLATE = app
-#TARGET = b3coin-qt
+#TARGET = staycoin-qt
 #VERSION = 2.0.0.2
 #INCLUDEPATH += src src/json src/qt
 #QT += core gui network printsupport
@@ -12,7 +12,7 @@
 #QMAKE_CXXFLAGS = -fpermissive
 
 TEMPLATE = app
-TARGET = b3coin-qt
+TARGET = staycoin-qt
 VERSION = 2.0.0.2
 INCLUDEPATH += src src/json src/qt
 QT += network

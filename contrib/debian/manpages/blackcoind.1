@@ -1,19 +1,19 @@
-.TH BLACKCOIND "7" "July 2014" "b3coind 3.19" 
+.TH BLACKCOIND "7" "September 2017" "staycoind 1.0" 
 .SH NAME
-b3coind \- peer-to-peer network based digital currency
+staycoind \- peer-to-peer network based digital currency
 .SH SYNOPSIS
-b3coin [options] <command> [params]  
+staycoin [options] <command> [params]  
 .TP
-b3coin [options] help <command> - Get help for a command
+staycoin [options] help <command> - Get help for a command
 .SH DESCRIPTION
-This  manual page documents the b3coind program. Novacoin is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
+This  manual page documents the staycoind program. Novacoin is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
 
 Novacoins can be sent easily through the Internet, without having to trust middlemen. Transactions are designed to be irreversible. Be safe from instability caused by fractional reserve banking and central banks. The limited inflation of the Novacoin system’s money supply is distributed evenly (by CPU power) throughout the network, not monopolized by banks.
 
 .SH OPTIONS
 .TP
 \fB\-conf=\fR<file>
-Specify configuration file (default: b3coin.conf)
+Specify configuration file (default: staycoin.conf)
 .TP
 \fB\-gen\fR
 Generate coins
@@ -84,14 +84,14 @@ This help message
 \fBbackupwallet 'destination'\fR
 Safely copies *wallet.dat* to 'destination', which can be a directory or a path with filename.
 .TP
-\fBgetaccount 'b3coinaddress'\fR
+\fBgetaccount 'staycoinaddress'\fR
 Returns the account associated with the given address.
 .TP
-\fBsetaccount 'b3coinaddress' ['account']\fR
+\fBsetaccount 'staycoinaddress' ['account']\fR
 Sets the ['account'] associated with the given address. ['account'] may be omitted to remove an address from ['account'].
 .TP
 \fBgetaccountaddress 'account'\fR
-Returns a new b3coin address for 'account'.
+Returns a new staycoin address for 'account'.
 .TP
 \fBgetaddressesbyaccount 'account'\fR
 Returns the list of addresses associated with the given 'account'.
@@ -112,7 +112,7 @@ Returns the number of connections to other nodes.
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty.
 .TP
 \fBgetgenerate\fR
-Returns boolean true if server is trying to generate b3coins, false otherwise.
+Returns boolean true if server is trying to generate staycoins, false otherwise.
 .TP
 \fBsetgenerate 'generate' ['genproclimit']\fR
 Generation is limited to ['genproclimit'] processors, -1 is unlimited.
@@ -124,13 +124,13 @@ Returns a recent hashes per second performance measurement while generating.
 Returns an object containing server information.
 .TP
 \fBgetnewaddress 'account'\fR
-Returns a new b3coin address for receiving payments. If 'account' is specified (recommended), it is added to the address book so payments received with the address will be credited to 'account'.
+Returns a new staycoin address for receiving payments. If 'account' is specified (recommended), it is added to the address book so payments received with the address will be credited to 'account'.
 .TP
 \fBgetreceivedbyaccount 'account' ['minconf=1']\fR
 Returns the total amount received by addresses associated with 'account' in transactions with at least ['minconf'] confirmations.
 .TP
-\fBgetreceivedbyaddress 'b3coinaddress' ['minconf=1']\fR
-Returns the total amount received by 'b3coinaddress' in transactions with at least ['minconf'] confirmations.
+\fBgetreceivedbyaddress 'staycoinaddress' ['minconf=1']\fR
+Returns the total amount received by 'staycoinaddress' in transactions with at least ['minconf'] confirmations.
 .TP
 \fBgettransaction 'txid'\fR
 Returns information about a specific transaction, given hexadecimal transaction ID.
@@ -179,26 +179,26 @@ Returns a list of the last ['count'] transactions for 'account' - for all accoun
 \fBmove <'fromaccount'> <'toaccount'> <'amount'> ['minconf=1'] ['comment']\fR
 Moves funds between accounts.
 .TP
-\fBsendfrom* <'account'> <'b3coinaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
-Sends amount from account's balance to 'b3coinaddress'. This method will fail if there is less than amount b3coins with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
+\fBsendfrom* <'account'> <'staycoinaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
+Sends amount from account's balance to 'staycoinaddress'. This method will fail if there is less than amount staycoins with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
 .TP     
-\fBsendtoaddress 'b3coinaddress' 'amount' ['comment'] ['comment-to']\fR
-Sends amount from the server's available balance to 'b3coinaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
+\fBsendtoaddress 'staycoinaddress' 'amount' ['comment'] ['comment-to']\fR
+Sends amount from the server's available balance to 'staycoinaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
 .TP    
 \fBstop\fR
-Stops the b3coin server.
+Stops the staycoin server.
 .TP    
-\fBvalidateaddress 'b3coinaddress'\fR
-Checks that 'b3coinaddress' looks like a proper b3coin address. Returns an object containing:
+\fBvalidateaddress 'staycoinaddress'\fR
+Checks that 'staycoinaddress' looks like a proper staycoin address. Returns an object containing:
 
     "isvalid" : true or false.
     "ismine"  : true if the address is in the server's wallet.
-    "address" : b3coinaddress.
+    "address" : staycoinaddress.
 
     *note: ismine and address are only returned if the address is valid.
 
 .SH "SEE ALSO"
-b3coin.conf(5)
+staycoin.conf(5)
 .SH AUTHOR
 This manual page was written by Micah Anderson <micah@debian.org> for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.
 

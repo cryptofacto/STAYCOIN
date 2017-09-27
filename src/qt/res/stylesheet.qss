@@ -44,7 +44,7 @@ QToolBar::handle {
     color: gray;
 }
 
-#b3coinstatusbar {
+#staycoinstatusbar {
     background-color: #2C590C; color: #ffffff;
 } 
 

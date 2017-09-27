@@ -918,7 +918,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "b3coin";
+    const char* pszModule = "staycoin";
 #endif
     if (pex)
         return strprintf(
@@ -948,13 +948,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\B3-CoinV2
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\B3-CoinV2
-    // Mac: ~/Library/Application Support/B3-CoinV2
-    // Unix: ~/.B3-CoinV2
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\StaycoinV2
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\StaycoinV2
+    // Mac: ~/Library/Application Support/StaycoinV2
+    // Unix: ~/.StaycoinV2
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "B3-CoinV2";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "StaycoinV2";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -966,10 +966,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "B3-CoinV2";
+    return pathRet / "StaycoinV2";
 #else
     // Unix
-    return pathRet / ".B3-CoinV2";
+    return pathRet / ".StaycoinV2";
 #endif
 #endif
 }
@@ -1018,7 +1018,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "b3coin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "staycoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1051,7 +1051,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "b3coind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "staycoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
